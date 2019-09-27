@@ -1,0 +1,99 @@
+
+p {
+font-family: 'Abel', sans-serif;
+color:  #ffffff;
+font-size: 18px;
+}
+
+h1 {
+font-family: 'Fjalla One', sans-serif;
+color:  #ffffff;
+}
+
+h5 {
+    font-family: 'Fjalla One', sans-serif;
+    color:  #ffffff;
+    }
+h3 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.footer p{ 
+font-family: 'Cairo', sans-serif;
+color:  #ffffff;
+}
+
+body {
+    background-color: #30303f;
+}
+
+.logo {
+
+    width: 100px;
+    /* vertical-align: middle; */
+    /* margin-left: 650px; */
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 0px;
+    display: block;
+ }
+ .nav-wrapper {
+    background-color: black;
+    padding-top: 8px;
+
+ }
+
+ #index-banner {
+     height: 600px;
+ }
+
+ td{
+    font-family: 'Abel', sans-serif;
+     color: #000000;
+ }
+ th{
+    font-family: 'Fjalla One', sans-serif;
+    color: #000000;
+}
+
+.author{
+    font-family: 'Abel', sans-serif;
+color:  #ffffff;
+}
+
+#bio {
+    background-color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.carousel {
+    height: 600px;
+}
+
+#white-text {
+    color: #ffffff;
+}
+
+.black-text {
+    color: #000000;
+}
+
+.picture{
+    float: left;
+}
+.paragraph{
+    
+  
+}
+.table {
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+ 
+@media only screen and (max-width: 480px) {
+    .picture{
+        clear: right;
+    }
+}
