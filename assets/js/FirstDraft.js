@@ -2,7 +2,10 @@
 var characterID = '';
 // displayMovieInfo function re-renders the HTML to display the appropriate content
 function displayMovieInfo(event) {
-    console.log('I click!')
+    $('#carousel-comic').empty();
+    $('#carousel-movie').empty();
+    $('#table').empty();
+    $('#bio').empty();
 
     var movie = $("#movie-input").val().trim();//trim()
     console.log(movie)
@@ -142,7 +145,9 @@ function displayMovieInfo(event) {
 
         var $newDivMovie = $("<div></div>");
         var idUpdMovie = 0;
-
+        var infoTitle = [];
+        var infoRelease = [];
+        var infoRating = [];
 
         for (var i = 0; i < subMovies.length; i++) {
 
@@ -178,33 +183,39 @@ function displayMovieInfo(event) {
 
                     //                       // Creating a div to hold the movie
                     var OMDBmovieDiv = $("<div class='movie'>");
+                    var row$ = $('<tr>');
+                    var title = respon2.Title;
+
+                    //                       // Creating an element to hold the plot
+                    var TitleTD = $("<td>").text(title);
+
+                    //                       // Appending the plot
+                    row$.append(TitleTD);
 
                     //                       // Storing the rating data
                     var rating = respon2.Rated;
 
-                    //                       // Creating an element to have the rating displayed
-                    var OMDBpOne = $("<p>").text("Rating: " + rating);
+                    infoRating.push(rating)
 
+                    //                       // Creating an element to have the rating displayed
+                    var RatingTD = $("<td>").text(rating);
+                    row$.append(RatingTD);
                     //                       // Displaying the rating
-                    OMDBmovieDiv.append(OMDBpOne);
+                   
+                   
+                   
 
                     //                       // Storing the release year
                     var released = respon2.Released;
 
                     //                       // Creating an element to hold the release year
-                    var OMDBpTwo = $("<p>").text("Released: " + released);
+                    var ReleaseTD = $("<td>").text(released);
 
                     //                       // Displaying the release year
-                    OMDBmovieDiv.append(OMDBpTwo);
+                    row$.append(ReleaseTD);
 
                     //                       // Storing the plot
-                    var OMDBplot = respon2.Plot;
 
-                    //                       // Creating an element to hold the plot
-                    var OMDBpThree = $("<p>").text("Plot: " + OMDBplot);
-
-                    //                       // Appending the plot
-                    OMDBmovieDiv.append(OMDBpThree);
 
                     //                       // Retrieving the URL for the image
                     var OMDBimgURL = respon2.Poster;
@@ -219,7 +230,7 @@ function displayMovieInfo(event) {
                     $("#OMDBmovies-view").append(OMDBmovieDiv);
 
 
-
+                    $('#table').append(row$);
 
 
                     //child div  id/class
@@ -237,7 +248,7 @@ function displayMovieInfo(event) {
 
                     
                 }
-
+                console.log(infoRating);
 
                 // if (subMovies[i] == subMovies[(subMovies.length-1)]){
                     $('#carousel-movie').carousel();
