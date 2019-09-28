@@ -2,11 +2,15 @@
 var characterID = '';
 // displayMovieInfo function re-renders the HTML to display the appropriate content
 function displayMovieInfo(event) {
+    event.preventDefault();
     $('#carousel-comic').empty();
     $('#carousel-movie').empty();
     $('#table').empty();
     $('#bio').empty();
-
+    function showDiv() {
+        document.getElementById('magic').style.display = "block";
+     }
+     showDiv()
     var movie = $("#movie-input").val().trim();//trim()
     console.log(movie)
 
@@ -269,4 +273,15 @@ function displayMovieInfo(event) {
 
 // Adding a click event listener to all elements with a class of "movie-btn"
 $(document).on("click", "#download-button", displayMovieInfo);
+var input = document.getElementById("movie-input");
 
+// // Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("download-button").click();
+  }
+});
