@@ -2,8 +2,16 @@
 var characterID = '';
 // displayMovieInfo function re-renders the HTML to display the appropriate content
 function displayMovieInfo(event) {
-    console.log('I click!')
+    event.preventDefault();
+    $('#carousel-comic').empty();
+    $('#carousel-movie').empty();
+    $('#table').empty();
+    $('#bio').empty();
 
+    function showDiv() {
+        document.getElementById('magic').style.display = "block";
+    }
+    showDiv()
     var movie = $("#movie-input").val().trim(); //trim()
     console.log(movie)
 
@@ -142,7 +150,9 @@ function displayMovieInfo(event) {
 
         var $newDivMovie = $("<div></div>");
         var idUpdMovie = 0;
-
+        var infoTitle = [];
+        var infoRelease = [];
+        var infoRating = [];
 
         for (var i = 0; i < subMovies.length; i++) {
 
@@ -178,33 +188,39 @@ function displayMovieInfo(event) {
 
                     //                       // Creating a div to hold the movie
                     var OMDBmovieDiv = $("<div class='movie'>");
+                    var row$ = $('<tr>');
+                    var title = respon2.Title;
+
+                    //                       // Creating an element to hold the plot
+                    var TitleTD = $("<td>").text(title);
+
+                    //                       // Appending the plot
+                    row$.append(TitleTD);
 
                     //                       // Storing the rating data
                     var rating = respon2.Rated;
 
-                    //                       // Creating an element to have the rating displayed
-                    var OMDBpOne = $("<p>").text("Rating: " + rating);
+                    infoRating.push(rating)
 
+                    //                       // Creating an element to have the rating displayed
+                    var RatingTD = $("<td>").text(rating);
+                    row$.append(RatingTD);
                     //                       // Displaying the rating
-                    OMDBmovieDiv.append(OMDBpOne);
+
+
+
 
                     //                       // Storing the release year
                     var released = respon2.Released;
 
                     //                       // Creating an element to hold the release year
-                    var OMDBpTwo = $("<p>").text("Released: " + released);
+                    var ReleaseTD = $("<td>").text(released);
 
                     //                       // Displaying the release year
-                    OMDBmovieDiv.append(OMDBpTwo);
+                    row$.append(ReleaseTD);
 
                     //                       // Storing the plot
-                    var OMDBplot = respon2.Plot;
 
-                    //                       // Creating an element to hold the plot
-                    var OMDBpThree = $("<p>").text("Plot: " + OMDBplot);
-
-                    //                       // Appending the plot
-                    OMDBmovieDiv.append(OMDBpThree);
 
                     //                       // Retrieving the URL for the image
                     var OMDBimgURL = respon2.Poster;
@@ -219,7 +235,7 @@ function displayMovieInfo(event) {
                     $("#OMDBmovies-view").append(OMDBmovieDiv);
 
 
-
+                    $('#table').append(row$);
 
 
                     //child div  id/class
@@ -237,7 +253,7 @@ function displayMovieInfo(event) {
 
 
                 }
-
+                console.log(infoRating);
 
                 // if (subMovies[i] == subMovies[(subMovies.length-1)]){
                 $('#carousel-movie').carousel();
@@ -258,3 +274,15 @@ function displayMovieInfo(event) {
 
 // Adding a click event listener to all elements with a class of "movie-btn"
 $(document).on("click", "#download-button", displayMovieInfo);
+var input = document.getElementById("movie-input");
+
+// // Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("download-button").click();
+    }
+});
