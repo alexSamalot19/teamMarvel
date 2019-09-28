@@ -7,27 +7,28 @@ function displayMovieInfo(event) {
     $('#carousel-movie').empty();
     $('#table').empty();
     $('#bio').empty();
+
     function showDiv() {
         document.getElementById('magic').style.display = "block";
-     }
-     showDiv()
-    var movie = $("#movie-input").val().trim();//trim()
+    }
+    showDiv()
+    var movie = $("#movie-input").val().trim(); //trim()
     console.log(movie)
 
 
     var pubKey = "dba1c4ca26b084dd52bd9bb090fa19d8";
     var queryURL = "http://gateway.marvel.com/v1/public/characters?name=" + encodeURI(movie) + "&apikey=" + pubKey
-    // Creating an AJAX call for the specific movie button being clicked
+        // Creating an AJAX call for the specific movie button being clicked
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         console.log(response);
         var results = response.data.results[0]
-        // Creating a div to hold the movie
+            // Creating a div to hold the movie
         var movieDiv = $("<div class='movie'>");
         characterID = results.id
-        // Storing the rating data
+            // Storing the rating data
         var name = results.name;
 
         // Creating an element to have the rating displayed
@@ -66,7 +67,7 @@ function displayMovieInfo(event) {
         $.ajax({
             url: queryURL2,
             method: "GET"
-        }).then(function (response) {
+        }).then(function(response) {
             console.log(response);
             results2 = response.data.results
 
@@ -126,13 +127,13 @@ function displayMovieInfo(event) {
     $.ajax({
         url: movieQueryURL,
         method: "GET"
-    }).then(function (respon) {
+    }).then(function(respon) {
         // debugger
         console.log(respon);
         //               // Create a copy of the movies array
         var newMovieArray = respon.Search.slice();
         //               // Sort the copy
-        newMovieArray.sort(function (a, b) {
+        newMovieArray.sort(function(a, b) {
             a.Year = parseInt(a.Year);
             b.Year = parseInt(b.Year);
             if (a.Year > b.Year) {
@@ -161,7 +162,7 @@ function displayMovieInfo(event) {
             $.ajax({
                 url: queryURL2,
                 method: "GET"
-            }).then(function (respon2) {
+            }).then(function(respon2) {
 
                 if (respon2.Rated === "G" || respon2.Rated === "PG" || respon2.Rated === "PG-13") {
                     console.log(respon2)
@@ -205,9 +206,9 @@ function displayMovieInfo(event) {
                     var RatingTD = $("<td>").text(rating);
                     row$.append(RatingTD);
                     //                       // Displaying the rating
-                   
-                   
-                   
+
+
+
 
                     //                       // Storing the release year
                     var released = respon2.Released;
@@ -250,20 +251,20 @@ function displayMovieInfo(event) {
                     $("#imgMov-" + String(idUpdMovie)).append(pThreeMovie);
                     idUpdMovie++;
 
-                    
+
                 }
                 console.log(infoRating);
 
                 // if (subMovies[i] == subMovies[(subMovies.length-1)]){
-                    $('#carousel-movie').carousel();
+                $('#carousel-movie').carousel();
                 // }
             });
         }
 
-      
+
 
     });
-    
+
 
 
 
@@ -277,11 +278,11 @@ var input = document.getElementById("movie-input");
 
 // // Execute a function when the user releases a key on the keyboard
 input.addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("download-button").click();
-  }
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("download-button").click();
+    }
 });
