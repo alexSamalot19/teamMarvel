@@ -17,7 +17,7 @@ function displayMovieInfo(event) {
 
 
     var pubKey = "dba1c4ca26b084dd52bd9bb090fa19d8";
-    var queryURL = "http://gateway.marvel.com/v1/public/characters?name=" + encodeURI(movie) + "&apikey=" + pubKey
+    var queryURL = "https://gateway.marvel.com/v1/public/characters?name=" + encodeURI(movie) + "&apikey=" + pubKey
         // Creating an AJAX call for the specific movie button being clicked
     $.ajax({
         url: queryURL,
