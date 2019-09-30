@@ -3,142 +3,137 @@
 <html>
 
 <head>
-  <!--Import Google Icon Font-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Abel|Cairo|Fjalla+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="shortcut icon" href="">
+    <!--Import Google Icon Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Cairo|Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <img src='assets/images/MarvelLogo.svg.png' class='logo' alt='logo'>
-    </div>
-  </nav>
-
-  <div class="container">
-
-
-    <!--Entry Search Page-->
-    <div class="section no-pad-bot" id="index-banner">
-      <div class="container">
-        <br><br>
-        <h1 class="header center red-text">MARVELize</h1>
-        <h1 class="header center red-text">
-          <img src="https://img.icons8.com/color/52/000000/iron-man.png">
-          <img src="https://img.icons8.com/color/52/000000/captain-america.png">
-          <img src="https://img.icons8.com/color/52/000000/wolverine.png">
-          <img src="https://img.icons8.com/offices/52/000000/spiderman-head--v1.png">
-          <img src="https://img.icons8.com/color/52/000000/thor.png">
-          <img src="https://img.icons8.com/color/52/000000/groot.png">
-        </h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Search your favorite MARVEL character</h5>
+    <nav>
+        <div class="nav-wrapper">
+            <img src='assets/images/MarvelLogo.svg.png' class='logo' alt='logo'>
         </div>
-
-        <form>
-          <div class="input-field col s8">
-            <input id="movie-input" type="search" required>
-            <label class="label-icon" for="search"><i class="material-icons prefix"></i></label>
-            <i class="material-icons"></i>
-          </div>
-        </form>
-
-        <div class="row center">
-          <a id="download-button" class="btn-large waves-effect waves-light red">ASSEMBLE</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-  </div>
-
-
-
-  <!--This MAGIC div will appear only when the SEARCH button is clicked, with the character info-->
-  <div id="magic">
-
-    <!--Bio Section-->
-    <div id="bio">
-
-    </div>
-
-    <!--Movie Slider Section-->
-    <div class="movies-container">
-      <div class="container">
-        <h3 class="header white-text">Movies</h3>
-
-        <div class="carousel" id="carousel-movie">
-
-        </div>
-      </div>
-    </div>
-
-    <!--Table Section-->
-    <div class="table">
-      <div class="container">
-        <h3 class="black-text">Character Info</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Real Name</th>
-              <th>Creator</th>
-              <th>Year Created</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Natasha Romanenko</td>
-              <td>Stan Lee</td>
-              <td>1969</td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!--Comics Slider Section-->
+    </nav>
 
     <div class="container">
-      <h3 class="white-text">Comic Books</h3>
-      <div class="carousel" id="carousel-comic">
 
-      </div>
+
+        <!--Entry Search Page-->
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+                <br><br>
+                <h1 class="header center red-text">MARVELize</h1>
+                <h1 class="header center red-text">
+                    <img src="https://img.icons8.com/color/52/000000/iron-man.png">
+                    <img src="https://img.icons8.com/color/52/000000/captain-america.png">
+                    <img src="https://img.icons8.com/color/52/000000/wolverine.png">
+                    <img src="https://img.icons8.com/offices/52/000000/spiderman-head--v1.png">
+                    <img src="https://img.icons8.com/color/52/000000/thor.png">
+                    <img src="https://img.icons8.com/color/52/000000/groot.png">
+                </h1>
+                <div class="row center">
+                    <h5 class="header col s12 light">Search your favorite MARVEL character</h5>
+                </div>
+
+                <form>
+                    <div class="input-field col s8">
+                        <input id="movie-input" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons prefix"></i></label>
+                        <i class="material-icons"></i>
+                    </div>
+                </form>
+
+                <div class="row center">
+                    <a id="download-button" class="btn-large waves-effect waves-light red">ASSEMBLE</a>
+                </div>
+                <br><br>
+
+            </div>
+        </div>
     </div>
 
 
 
+    <!--This MAGIC div will appear only when the SEARCH button is clicked, with the character info-->
+    <div id="magic" style="display:none;">
 
-
-  </div>
-
-  <footer class="page-footer red">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">For education purposes only</h5>
-          <p class="grey-text text-lighten-4">We are a team of code learners and MARVEL fans with no association with
-            the corporation.</p>
-
+        <!--Bio Section-->
+        <div id="bio" class='container'>
 
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Authors</h5>
-          <ul>
-            <li><a class="author" href="#!">Alex Samalot</a></li>
-            <li><a class="author" href="#!">Damien Aponte</a></li>
-            <li><a class="author" href="#!">Erik Tenecela</a></li>
-            <li><a class="author" href="#!">Ferd Marinho</a></li>
-          </ul>
+
+        <!--Movie Slider Section-->
+        <div class="movies-container">
+            <div class="container">
+                <h3 class="header white-text">Movies</h3>
+
+                <div class="carousel" id="carousel-movie">
+
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!--Table Section-->
+        <div class="table">
+            <div class="container">
+                <h3 class="black-text">Movie Info</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Rated</th>
+                            <th>Release Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--Comics Slider Section-->
+
+        <div class="container">
+            <h3 class="white-text">Comic Books</h3>
+            <div class="carousel" id="carousel-comic">
+
+            </div>
+        </div>
+
+
+
+
+
     </div>
-  </footer>
+
+    <footer class="page-footer red">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">For education purposes only</h5>
+                    <p class="grey-text text-lighten-4">We are a team of code learners and MARVEL fans with no association with the corporation.</p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Authors</h5>
+                    <ul>
+                        <li><a class="author" href="#!">Alex Samalot</a></li>
+                        <li><a class="author" href="#!">Damien Aponte</a></li>
+                        <li><a class="author" href="#!">Erik Tenecela</a></li>
+                        <li><a class="author" href="#!">Ferd Marinho</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -146,11 +141,11 @@
 
 
 
-  <!--JavaScript at end of body for optimized loading-->
+    <!--JavaScript at end of body for optimized loading-->
 
-  <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type='text/javascript' src="assets/js/FirstDraft.js"></script>
+    <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type='text/javascript' src="assets/js/FirstDraft.js"></script>
 
 </body>
 

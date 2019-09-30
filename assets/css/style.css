@@ -1,64 +1,80 @@
-
 p {
-font-family: 'Abel', sans-serif;
-color:  #393939;
-font-size: 18px;
+    font-family: 'Abel', sans-serif;
+    color: #393939;
+    font-size: 18px;
 }
 
 h1 {
-font-family: 'Fjalla One', sans-serif;
-color:  #ffffff;
+    font-family: 'Fjalla One', sans-serif;
+    color: #ffffff;
 }
 
 h5 {
     font-family: 'Fjalla One', sans-serif;
-    color:  #ffffff;
-    }
+    color: #ffffff;
+}
+
 h3 {
     font-family: 'Fjalla One', sans-serif;
 }
 
-.footer p{ 
-font-family: 'Cairo', sans-serif;
-color:  #ffffff;
+.footer p {
+    font-family: 'Cairo', sans-serif;
+    color: #ffffff;
 }
 
 body {
     background-color: #30303f;
 }
 
-.logo {
+#bio {
+    border: 4px solid red;
+    border-radius: 10px;
+    width: 800px;
+}
 
+#bio img {
+    height: 200px;
+    width: 200px;
+}
+
+.card-content {
+    color: #30303f;
+    align-self: auto;
+}
+
+.logo {
     width: 100px;
     /* vertical-align: middle; */
     /* margin-left: 650px; */
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
     display: block;
- }
- .nav-wrapper {
+}
+
+.nav-wrapper {
     background-color: black;
     padding-top: 8px;
+}
 
- }
+#index-banner {
+    height: 600px;
+}
 
- #index-banner {
-     height: 600px;
- }
-
- td{
+td {
     font-family: 'Abel', sans-serif;
-     color: #000000;
- }
- th{
+    color: #000000;
+}
+
+th {
     font-family: 'Fjalla One', sans-serif;
     color: #000000;
 }
 
-.author{
+.author {
     font-family: 'Abel', sans-serif;
-color:  #ffffff;
+    color: #ffffff;
 }
 
 #bio {
@@ -79,21 +95,20 @@ color:  #ffffff;
     color: #000000;
 }
 
-.picture{
+.picture {
     float: left;
 }
-.paragraph{
-    
-  
-}
+
+.paragraph {}
+
 .table {
     background-color: #ffffff;
     padding-top: 20px;
     padding-bottom: 20px;
 }
- 
+
 @media only screen and (max-width: 480px) {
-    .picture{
+    .picture {
         clear: right;
     }
 }
