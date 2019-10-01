@@ -276,13 +276,9 @@ function displayMovieInfo(event) {
 $(document).on("click", "#download-button", displayMovieInfo);
 var input = document.getElementById("movie-input");
 
-// // Execute a function when the user releases a key on the keyboard
-input.addEventListener("keyup", function(event) {
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
-        // Cancel the default action, if needed
-        event.preventDefault();
-        // Trigger the button element with a click
-        document.getElementById("download-button").click();
-    }
+$(document).ready(function(){
+    $('#movie-input').keypress(function(e){
+      if(e.keyCode==13)
+      $('#download-button').click();
+    });
 });
