@@ -48,8 +48,8 @@ function displayComicsMovies(event) {
             $('#bio').append(pTwo);
 
             // Retrieving the URL for the image
-            var thumbnail = results.thumbnail
-            var extension = "." + thumbnail.extension
+            var thumbnail = results.thumbnail;
+            var extension = "." + thumbnail.extension;
             var imgURL = thumbnail.path + extension;
 
             // Creating an element to hold the image
@@ -64,7 +64,7 @@ function displayComicsMovies(event) {
                 method: "GET"
             }).then(function (response) {
                 console.log(response);
-                results2 = response.data.results
+                results2 = response.data.results;
 
                 //making the carousel
                 var $newDiv = $("<div></div>");
@@ -161,7 +161,7 @@ function displayComicsMovies(event) {
                         // Storing the rating data
                         var rating = eachMovieInfo.Rated;
 
-                        infoRating.push(rating)
+                        infoRating.push(rating);
 
                         // Creating an element to have the rating displayed
                         var RatingTD = $("<td>").text(rating);
