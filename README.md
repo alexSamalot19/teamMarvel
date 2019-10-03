@@ -17,8 +17,11 @@ Marvel character search returns movies and comics along with bio info on the cha
 
 ### And let Marvelize do the rest
 <br>
----
+<br>
+
 ## Codes
+<br>
+
 | Path    | Purpose          |
 | -------- | -------------- |
 | index.html | Contains the interactive web elements |
